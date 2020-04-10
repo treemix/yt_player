@@ -24,14 +24,37 @@
 
         <div id="top-panel">
             <div id="title-video">Full screen video</div>
-            <a id="play-list" href="./playlist.html">
-                <svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+
+            <a id="menu-btn" href="./menu.html">
+                <svg class="bi bi-justify" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
-                        d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z"
+                        d="M2 12.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z"
                         clip-rule="evenodd" />
                 </svg>
             </a>
+
+            
+
+            <a id="play-list" href="./playlist.html">
+                <svg class="bi bi-music-note-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" clip-rule="evenodd" />
+                    <path d="M11 2.82a1 1 0 01.804-.98l3-.6A1 1 0 0116 2.22V4l-5 1V2.82z" />
+                    <path fill-rule="evenodd"
+                        d="M0 11.5a.5.5 0 01.5-.5H4a.5.5 0 010 1H.5a.5.5 0 01-.5-.5zm0-4A.5.5 0 01.5 7H8a.5.5 0 010 1H.5a.5.5 0 01-.5-.5zm0-4A.5.5 0 01.5 3H8a.5.5 0 010 1H.5a.5.5 0 01-.5-.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+
+            <a id="share-btn" href="./share.html">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="1em" height="1em">
+                    <path
+                        d="M 20 0 C 17.789063 0 16 1.789063 16 4 C 16 4.277344 16.039063 4.550781 16.09375 4.8125 L 7 9.375 C 6.265625 8.535156 5.203125 8 4 8 C 1.789063 8 0 9.789063 0 12 C 0 14.210938 1.789063 16 4 16 C 5.203125 16 6.265625 15.464844 7 14.625 L 16.09375 19.1875 C 16.039063 19.449219 16 19.722656 16 20 C 16 22.210938 17.789063 24 20 24 C 22.210938 24 24 22.210938 24 20 C 24 17.789063 22.210938 16 20 16 C 18.796875 16 17.734375 16.535156 17 17.375 L 7.90625 12.8125 C 7.960938 12.550781 8 12.277344 8 12 C 8 11.722656 7.960938 11.449219 7.90625 11.1875 L 17 6.625 C 17.734375 7.464844 18.796875 8 20 8 C 22.210938 8 24 6.210938 24 4 C 24 1.789063 22.210938 0 20 0 Z" />
+                    </svg>
+            </a>
+
         </div>
 
         <div id="video-overlay">
@@ -70,7 +93,7 @@
                             d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" />
                     </svg>
                 </button>
-                <button id="mute" class="on-mute" onclick="onMute();">
+                <button id="mute" class="off-mute" onclick="onMute();">
                     <svg class="bi bi-volume-up-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -101,7 +124,7 @@
     </section>
 
 
-    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -113,25 +136,10 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="./list.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+
     <script type="text/javascript">
-        var play_list = [
-            {
-                title: "News and Community Spotlight | April 9, 2020 | Unreal Engine",
-                id: "EGcTPWXgR_Y"
-            },
-            {
-                title: "News and Community Spotlight | April 2, 2020 | Unreal Engine",
-                id: "oxt0HZxgDp8"
-            },
-            {
-                title: "Real-time skills at the University of Hertfordshire | Project Spotlight | Unreal Engine",
-                id: "g1iy_BmgUbY"
-            },
-            {
-                title: "News and Community Spotlight | March 26, 2020 | Unreal Engine",
-                id: "SvLZP93Sh88"
-            },
-        ];
 
         var player;
         var play_pause_status = "play";
@@ -139,7 +147,7 @@
             player = new YT.Player('player', {
                 videoId: 'zFwL301vd4A',
                 playerVars: {
-                    mute: 1,
+                    //mute: 0,
                     autoplay: 1,
                     loop: 1,
                     controls: 0,
@@ -184,7 +192,7 @@
             }
         }
 
-        function onError(){
+        function onError() {
             jQuery('#video-overlay').show();
         }
 
@@ -193,18 +201,19 @@
             var _index = player.getPlaylistIndex();
 
             if (el.data === 1) {
-                jQuery('#video-overlay').hide();
+                setTimeout(function () {
+                    jQuery('#video-overlay').hide();
+                }, 500);
 
-                
                 var _title = play_list[_index].title;
                 jQuery('#title-video').html(_title);
 
                 totalTimerDisplay();
             }
 
-            if (el.data === 2 ||  el.data === 0 || el.data === -1) {
+            if (el.data === 2 || el.data === 0 || el.data === -1) {
                 jQuery('#video-overlay').show();
-                
+
             }
 
         }
@@ -215,7 +224,6 @@
             iframe = document.getElementById('player');
 
             loadPlaylistVideoIds();
-
 
             updateTimerDisplay();
             updateProgressBar();
@@ -259,7 +267,7 @@
             });
 
             player.setLoop(true);
-            
+
         }
 
         function totalTimerDisplay() {
@@ -303,6 +311,15 @@
             // Skip video to new time.
             player.seekTo(newTime);
         }
+
+        jQuery(document).on("click", ".background-video", function (event) {
+            play_pause();
+        });
+
+        jQuery(document).on("click", "#video-overlay", function (event) {
+            play_pause();
+        });
+
     </script>
 </body>
 

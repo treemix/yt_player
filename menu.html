@@ -21,7 +21,7 @@
 <body>
 
     <div class="container">
-        <ul id="play-lists" class="list-group list-group-flush"></ul>
+        <h1>Menu</h1>
     </div>
 
 
@@ -35,21 +35,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./list.js"></script>
-    <script type="text/javascript">
-
-
-
-        jQuery(document).ready(function ($) {
-
-            play_list.forEach((item) => {
-                $("#play-lists").append('<li class="list-group-item"><a href="./index.html?id=' + item.id + '">' + item.title + '</a></li>');
-            });
-        });
-
-
-
-    </script>
 </body>
 
 </html>

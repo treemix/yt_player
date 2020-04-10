@@ -10,9 +10,9 @@ body {
 /* Background video */
   .background-video {
       position: absolute;
-      top: 0;
+      top: 50px;
       right: 0;
-      bottom: 0;
+      bottom: 70px;
       left: 0;
       z-index: 1;
       overflow: hidden;
@@ -54,9 +54,13 @@ body {
     right: calc(50% - 256px);
 }
 
+#line:hover{
+    cursor: pointer;
+}
+
 #line{
 	margin-top: 15px;	
-	height: 4px;
+	height: 6px;
 	background: #fff;
     margin-right: 15px;
     margin-left: 15px;
@@ -65,14 +69,14 @@ body {
 .viewed {
 	position: absolute;
 	background: red;
-	height: 4px;
+	height: 6px;
 }
 
 #fader {
 	background: black;
-	border-radius: 5px;
-	width: 10px;
-	height: 10px;
+	border-radius: 7px;
+	width: 12px;
+	height: 12px;
 	position: relative;
 	z-index: 4;
 	bottom: 3px;
@@ -101,13 +105,40 @@ body {
 #play-list{
     display: block;
     float: right;
-    font-size: 34px;
+    font-size: 30px;
     background: transparent;
     border: none;
     color: white;
     line-height: 1;
     position: relative;
     margin-right: 15px;
+    margin-top: 5px;
+}
+
+#share-btn{
+    display: block;
+    float: right;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: white;
+    line-height: 1;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+#menu-btn{
+    display: block;
+    float: right;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: white;
+    line-height: 1;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 5px;
 }
 
 #bottom-panel{
