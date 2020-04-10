@@ -153,7 +153,8 @@
                 allowfullscreen: 1,
                 events: {
                     'onStateChange': onPlayerStateChange,
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+                    'onError': onError
                 }
             });
         }
@@ -183,20 +184,29 @@
             }
         }
 
+        function onError(){
+            jQuery('#video-overlay').show();
+        }
+
         function onPlayerStateChange(el) {
+
+            var _index = player.getPlaylistIndex();
+
             if (el.data === 1) {
                 jQuery('#video-overlay').hide();
 
-                var _index = player.getPlaylistIndex();
+                
                 var _title = play_list[_index].title;
                 jQuery('#title-video').html(_title);
 
                 totalTimerDisplay();
             }
 
-            if (el.data === 2) {
+            if (el.data === 2 ||  el.data === 0 || el.data === -1) {
                 jQuery('#video-overlay').show();
+                
             }
+
         }
 
         // Обработчик готовность
@@ -245,16 +255,11 @@
                 'listType': 'playlist',
                 'index': _index,
                 'startSeconds': 0,
-                'suggestedQuality': 'small'
+                'suggestedQuality': 'hd1080'
             });
-        }
-        /*Громкость*/
-        function editVolume() {
-            if (player.getVolume() == 0) {
-                player.setVolume('100');
-            } else {
-                player.setVolume('0');
-            }
+
+            player.setLoop(true);
+            
         }
 
         function totalTimerDisplay() {
